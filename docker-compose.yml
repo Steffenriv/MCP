@@ -1,0 +1,21 @@
+services:
+  konsulent-api:
+    build:
+      context: ./konsulent-api
+    container_name: konsulent-api
+    ports:
+      - "8001:8000"
+    restart: unless-stopped
+
+  llm-verktoy-api:
+    build:
+      context: ./llm-verktoy-api
+    container_name: llm-verktoy-api
+    ports:
+      - "8002:8000"
+    environment:
+      # Viktig: i Docker-nettverket bruker vi service-navn som host
+      KONSULENT_API_BASE_URL: "http://konsulent-api:8000"
+    depends_on:
+      - konsulent-api
+    restart: unless-stopped

@@ -1,0 +1,32 @@
+[
+    {
+        "id": "0731af84-2aff-4f24-9b8f-a50f1535f1fa",
+        "name": "Kari Nordmann",
+        "skills": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "load_percentage": 50
+    },
+    {
+        "id": "5eb601aa-8044-4183-8573-64212dcdfade",
+        "name": "Per Hansen",
+        "skills": [
+            "Java",
+            "Spring Boot",
+            "Hibernate"
+        ],
+        "load_percentage": 90
+    },
+    {
+        "id": "850be6d3-4b79-4ad3-bc39-169a1e9a21e8",
+        "name": "Lise Olsen",
+        "skills": [
+            "C#",
+            ".NET",
+            "Azure"
+        ],
+        "load_percentage": 60
+    }
+]

@@ -1,0 +1,9 @@
+# FAST API
+fastapi[standard]==0.128.0
+
+# Uvicorn for running the FastAPI server
+Uvicorn==0.40.0
+
+# Pydantic for data validation and settings management
+pydantic==2.12.5
+
