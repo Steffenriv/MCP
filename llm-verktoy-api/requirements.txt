@@ -1,0 +1,12 @@
+# FAST API
+fastapi 
+
+# Uvicorn for running the FastAPI server
+Uvicorn 
+
+# Pydantic for data validation and settings management
+pydantic
+
+# HTTP client for API requests
+httpx
+

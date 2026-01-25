@@ -14,7 +14,6 @@ services:
     ports:
       - "8002:8000"
     environment:
-      # Viktig: i Docker-nettverket bruker vi service-navn som host
       KONSULENT_API_BASE_URL: "http://konsulent-api:8000"
     depends_on:
       - konsulent-api

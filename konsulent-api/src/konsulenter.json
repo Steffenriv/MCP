@@ -1,0 +1,52 @@
+[
+    {
+        "id": "571a4c9d-77ac-4479-b654-2f71202d05b8",
+        "navn": "Kari Nordmann",
+        "ferdigheter": [
+            "JavaScript",
+            "React",
+            "Node.js"
+        ],
+        "belastning_prosent": 50
+    },
+    {
+        "id": "259a47e6-0c79-47e7-9355-4eb1df6560c4",
+        "navn": "Per Hansen",
+        "ferdigheter": [
+            "Java",
+            "Spring Boot",
+            "Hibernate"
+        ],
+        "belastning_prosent": 90
+    },
+    {
+        "id": "213e07f7-56cd-409d-91cb-e5efd1a8fe37",
+        "navn": "Lise Olsen",
+        "ferdigheter": [
+            "C#",
+            ".NET",
+            "Azure"
+        ],
+        "belastning_prosent": 60
+    },
+    {
+        "id": "89fd3bd3-59d2-4883-b34e-0aa8775143a1",
+        "navn": "Jens Johansen",
+        "ferdigheter": [
+            "Go",
+            "Kubernetes",
+            "python"
+        ],
+        "belastning_prosent": 30
+    },
+    {
+        "id": "380a0f78-a56c-492a-b901-1627d3ef9210",
+        "navn": "Ola Nordmann",
+        "ferdigheter": [
+            "Python",
+            "Django",
+            "FastAPI"
+        ],
+        "belastning_prosent": 75
+    }
+]
