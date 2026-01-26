@@ -1,5 +1,6 @@
 import requests
 import os
+import json
 
 from openai import OpenAI
 
@@ -15,15 +16,34 @@ client = OpenAI(
 
 user_prompt = "Finn en konsulent med god tilgjengelighet for et Python-prosjekt"
 
-# (Manuell eller heuristisk mapping – helt ok!)
-params = {
+# Manuell kall til tool-endepunktet for å hente konsulentdata
+params_manuell = {
     "min_tilgjengelighet_prosent": 20,
     "påkrevd_ferdighet": "python"
 }
 
+# Automatisk parameterutvinning via LLM for tool-kall
+param_prompt = """
+Returner KUN gyldig JSON med følgende felter:
+- min_tilgjengelighet_prosent (int mellom 0 og 100)
+- påkrevd_ferdighet (string)
+
+Ikke skriv noe annet enn JSON.
+"""
+
+param_response = client.chat.completions.create(
+    model="openai/gpt-4o-mini",
+    messages=[
+        {"role": "system", "content": param_prompt},
+        {"role": "user", "content": user_prompt},
+    ],
+)
+
+params_auto = json.loads(param_response.choices[0].message.content)
+
 tool_response = requests.get(
     "http://localhost:8002/tilgjengelige-konsulenter/sammendrag",
-    params=params,
+    params=params_auto,
 ).json()
 
 final_prompt = f"""
